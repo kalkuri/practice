@@ -17,7 +17,7 @@ class EmployeeInfo(models.Model):
     first_name=models.CharField(max_length=50,validators=[alpha])
     last_name=models.CharField(max_length=50,validators=[alpha])
     email=models.EmailField(max_length=50)
-    date_of_join=models.DateField(default=date.today())
+    date_of_join=models.DateTimeField(auto_now_add=True)
     technology_id=models.IntegerField()
     mobile_no=models.IntegerField()
     file=models.ImageField(upload_to= '',null=True)
